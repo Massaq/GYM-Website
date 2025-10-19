@@ -1,0 +1,410 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+header h1 .logo {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+header nav ul li a:hover {
+    color: #4CAF50;
+}
+
+
+main {
+  padding: 20px 0;
+}
+
+
+#slider {
+  position: relative;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+
+.slider-item {
+  position: relative;
+  text-align: center;
+}
+
+
+.slider-item img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+
+.slider-item .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+section {
+  margin-bottom: 40px;
+  padding: 40px 0;
+}
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+
+.service-item {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+
+.service-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.service-item h3 {
+  margin-top: 15px;
+}
+
+
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+
+th {
+  background: #4CAF50;
+  color: white;
+}
+
+
+.social-icons {
+  text-align: center;
+}
+
+
+.social-icons .icon {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+.social-icons .icon:hover {
+    color: #4CAF50;
+}
+
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+/* --- Нові стилі для форм (Авторизація, Реєстрація) --- */
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group input[type="file"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+.btn:hover {
+  background: #45a049;
+}
+
+
+
+
+/* --- Нові стилі для FAQ --- */
+.faq-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+.faq-item {
+  background: #fff;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+.faq-item h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+
+.faq-item p {
+  color: #666;
+}
+
+
+/* --- Нові стилі для Адмін-панелі та адаптивності таблиць --- */
+.table-wrapper {
+  overflow-x: auto; /* Додає горизонтальний скрол на малих екранах */
+}
+
+
+td.actions {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap; /* Дозволяє кнопкам переноситись */
+}
+
+
+td.actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+td.actions button:hover {
+    opacity: 0.8;
+}
+
+
+.btn-view { background-color: #2196F3; } /* Синій */
+.btn-edit { background-color: #ff9800; } /* Помаранчевий */
+.btn-delete { background-color: #f44336; } /* Червоний */
+
+
+
+
+/* --- Мобільна версія (Адаптивність) --- */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  header nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  header nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+  }
+ 
+  header nav ul li:last-child {
+      border-bottom: none;
+  }
+
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  td.actions {
+    flex-direction: column;
+  }
+}
+
+
+/* --- Додаток для посилання під формою --- */
+.sub-form-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+
+.sub-form-link a {
+  color: #4CAF50;
+  font-weight: bold;
+  text-decoration: none;
+  transition: text-decoration 0.3s;
+}
+
+
+.sub-form-link a:hover {
+  text-decoration: underline;
+}
