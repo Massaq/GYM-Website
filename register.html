@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
@@ -25,40 +25,59 @@
     </div>
   </header>
 
-
   <main>
     <section id="register">
       <div class="container">
         <div class="form-container">
           <h2>Реєстрація</h2>
-          <form action="#" method="POST">
+          <form id="register-form" novalidate>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email">
+              <div class="error-message"></div>
             </div>
             <div class="form-group">
               <label for="password">Пароль</label>
-              <input type="password" id="password" name="password" required>
+              <input type="password" id="password" name="password">
+              <div class="error-message"></div>
             </div>
             <div class="form-group">
               <label for="last-name">Прізвище</label>
-              <input type="text" id="last-name" name="last-name" required>
+              <input type="text" id="last-name" name="last-name">
+              <div class="error-message"></div>
             </div>
             <div class="form-group">
               <label for="first-name">Ім'я</label>
-              <input type="text" id="first-name" name="first-name" required>
+              <input type="text" id="first-name" name="first-name">
+              <div class="error-message"></div>
             </div>
             <div class="form-group">
               <label for="middle-name">По батькові</label>
               <input type="text" id="middle-name" name="middle-name">
             </div>
+             <div class="form-group">
+                <label>Стать</label>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="Чоловік">
+                    <label for="male">Чоловік</label>
+                    <input type="radio" id="female" name="gender" value="Жінка">
+                    <label for="female">Жінка</label>
+                </div>
+                <div class="error-message"></div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Номер телефону</label>
+              <input type="text" id="phone" name="phone">
+              <div class="error-message"></div>
+            </div>
             <div class="form-group">
               <label for="birthdate">Дата народження</label>
-              <input type="date" id="birthdate" name="birthdate" required>
+              <input type="date" id="birthdate" name="birthdate">
+              <div class="error-message"></div>
             </div>
             <div class="form-group">
               <label for="group">Вибір групи</label>
-              <select id="group" name="group" required>
+              <select id="group" name="group">
                 <option value="">-- Оберіть групу --</option>
                 <option value="yoga">Йога</option>
                 <option value="pilates">Пілатес</option>
@@ -66,23 +85,52 @@
                 <option value="cardio">Кардіо</option>
                 <option value="aerobics">Аеробіка</option>
               </select>
+              <div class="error-message"></div>
             </div>
             <div class="form-group">
               <label for="file-upload">Завантажити медичну довідку (PDF, JPG)</label>
-              <input type="file" id="file-upload" name="file-upload" accept=".pdf,.jpg,.jpeg" required>
+              <input type="file" id="file-upload" name="file-upload" accept=".pdf,.jpg,.jpeg">
+              <div class="error-message"></div>
             </div>
             <button type="submit" class="btn">Зареєструватися</button>
           </form>
         </div>
+
+        <div class="table-container">
+            <h2>Зареєстровані користувачі</h2>
+            <div class="table-actions">
+                <button id="delete-selected" class="btn-delete">Видалити обрані</button>
+                <button id="duplicate-selected" class="btn-edit">Дублювати обрані</button>
+            </div>
+            <div class="table-wrapper">
+                <table id="user-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="select-all"></th>
+                            <th>Ім'я</th>
+                            <th>Прізвище</th>
+                            <th>Email</th>
+                            <th>Телефон</th>
+                            <th>Група</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </div>
       </div>
     </section>
   </main>
-
 
   <footer>
     <div class="container">
       <p>&copy; 2025 Фітнес-центр. Всі права захищені.</p>
     </div>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

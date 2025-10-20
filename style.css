@@ -408,3 +408,42 @@ td.actions button:hover {
 .sub-form-link a:hover {
   text-decoration: underline;
 }
+
+/* --- Стилі для повідомлень про помилки --- */
+.error-message {
+  color: #f44336; /* Червоний колір для помилок */
+  font-size: 14px;
+  margin-top: 5px;
+  min-height: 18px; /* Резервуємо місце, щоб форма не "стрибала" */
+}
+
+/* --- Стилі для поля вибору статі --- */
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.gender-options label {
+    font-weight: normal; /* Звичайний шрифт для міток радіо-кнопок */
+}
+
+/* --- Стилі для таблиці та кнопок дій --- */
+.table-container {
+    margin-top: 40px;
+}
+
+.table-actions {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.table-actions button {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
