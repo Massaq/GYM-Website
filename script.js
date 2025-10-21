@@ -36,7 +36,6 @@ $(document).ready(function() {
                 break;
 
             case 'password':
-                // ✅ НОВІ ПЕРЕВІРКИ ПАРОЛЯ
                 const hasUpperCase = /[A-Z]/.test(value);
                 const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
                 if (!value) {
@@ -66,7 +65,6 @@ $(document).ready(function() {
                 break;
 
             case 'birthdate':
-                // ✅ НОВА ПЕРЕВІРКА ВІКУ
                 if (!value) {
                     errorMessage = "Будь ласка, вкажіть вашу дату народження";
                 } else {
