@@ -447,3 +447,54 @@ td.actions button:hover {
     cursor: pointer;
     font-size: 16px;
 }
+
+/* --- Стилі для Калькулятора ІМТ --- */
+
+/* 'bmi-result' - стилі для блоку, де буде результат */
+#bmi-result {
+  margin-top: 25px; /* Відступ зверху */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2em; /* Трохи більший шрифт */
+  
+  /* 'display: none' - за замовчуванням блок результату
+    буде прихований. Ми покажемо його за допомогою JS. 
+  */
+  display: none;
+}
+
+/* Ми додамо 3 класи через JS, щоб розфарбувати
+  результат залежно від ІМТ.
+*/
+
+/* 'bmi-underweight' - Недостатня вага (напр., жовтий) */
+.bmi-underweight {
+  background-color: #fff3cd; /* Світло-жовтий */
+  border: 1px solid #ffeeba;
+  color: #856404;
+}
+
+/* 'bmi-normal' - Нормальна вага (зелений) */
+.bmi-normal {
+  background-color: #d4edda; /* Світло-зелений (як #4CAF50, але світліший) */
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+/* 'bmi-overweight' - Надмірна вага (червоний) */
+.bmi-overweight {
+  background-color: #f8d7da; /* Світло-червоний */
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+/* Стиль для самого числа ІМТ всередині блоку результату.
+  'span' - це тег, який ми створимо в JS.
+*/
+#bmi-result span {
+  display: block; /* Робить 'span' блочним елементом (на всю ширину) */
+  font-size: 2.5em; /* Дуже великий шрифт для числа */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
